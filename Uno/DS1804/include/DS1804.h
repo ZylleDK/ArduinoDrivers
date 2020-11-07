@@ -35,17 +35,18 @@
 
 #include <Arduino.h>
 #include <stdint.h>
+#include <avr/interrupt.h>
 
 class DS1804
 {
 private:
     uint8_t _Position = 0;
-    int Cs;
-    int HL;
-    int INC;
+    uint8_t _Cs;
+    uint8_t _HL;
+    uint8_t _INC;
 
 public:
-    DS1804(int, int, int);
+    DS1804(uint8_t, uint8_t, uint8_t);
     ~DS1804();
 
     void stepUp();
