@@ -45,6 +45,10 @@ private:
 public:
     DS1804(/* args */);
     ~DS1804();
+
+    void stepUp();
+    void stepDown();
+
 };
 
 #endif
