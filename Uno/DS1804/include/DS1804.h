@@ -40,10 +40,12 @@ class DS1804
 {
 private:
     uint8_t _Position = 0;
-    
+    int Cs;
+    int HL;
+    int INC;
 
 public:
-    DS1804(/* args */);
+    DS1804(int, int, int);
     ~DS1804();
 
     void stepUp();
